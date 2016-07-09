@@ -33,6 +33,9 @@ public class Compete_Activity extends Activity {
         tv_progressmode.setOnTouchListener(new TouchListener(2));
         tv_challengemode.setOnTouchListener(new TouchListener(3));
 
+        /**
+         *  返回按键
+         */
         tv_return.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

@@ -36,7 +36,7 @@
         android:background="@drawable/pressed"
         android:gravity="center"
         android:text="@string/start"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:layout_centerVertical="true"
         android:layout_alignStart="@+id/tv_compete_return" />
@@ -97,7 +97,7 @@
         android:background="@drawable/showtime"
         android:id="@+id/tv_rest_time"
         android:textSize="@android:dimen/app_icon_size"
-        android:textColor="#006400"
+        android:textColor="#e0e000"
         android:layout_toEndOf="@+id/tv_competemodename"
         android:layout_marginLeft="46dp"
         android:layout_alignTop="@+id/tv1" />
@@ -112,7 +112,7 @@
         android:textSize="@android:dimen/app_icon_size"
         android:layout_alignTop="@+id/textView5"
         android:layout_alignStart="@+id/tv_rest_time"
-        android:textColor="#006400" />
+        android:textColor="#e0e000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -133,7 +133,7 @@
         android:layout_below="@+id/textView4"
         android:layout_alignStart="@+id/tv_hit_num"
         android:background="@drawable/showtime"
-        android:textColor="#006400"
+        android:textColor="#e0e000"
         android:textSize="@android:dimen/app_icon_size" />
 
     <TextView

@@ -14,31 +14,53 @@ public class CommonData  {
    //public static String SSID = "a-b";
    // public static String PSWD = "123456789";
 
+    /**@brief Define device type
+     *
+     * Device       val
+     * Pad         0x01
+     * Tgt(small)  0x05
+     */
+    public static int DEV_PAD     = 1;
+    public static int DEV_TGT_B   = 4;
+    public static int DEV_TGT_S   = 5;
+
     public static int NETTYPE = 3;
-    public static int ARRAYSIZE = 9;
+    public static int ARRAYSIZE = 8;
 
     public static int EXERCISECMD = 0x01;
-    public static int HITCMD = 0x02;
-    public static int COMPETECMD = 0x03;
-    public static int ACKCMD = 0x05;
-    public static int STARTBYTE = 0xdf;
+    public static final int MOD_EXERCISE  = 0x01;
+    public static final int MOD_HIT        = 0x02;
+    public static final int MOD_COMPETE   = 0x03;
+
+    public static final int CMD_READ       = 0x01;
+
+
+    public static int STARTBYTE = 0x55;
     public static int STOPBYTE = 0xfd;
 
-    public static int STOPSTT = 0x00;
-    public static int ACKSTT = 0x01;
-    public static int PAUSESTT = 0x02;
-    public static int RESUMESTT = 0x03;
-    public static int STARTSTT = 0x04;
+
+    /**
+     *
+     */
+    public static final int STT_STOP  = 0x5;
+    public static final int STT_ACK    = 0x03;
+    public static final int STT_PAUSE  = 0x04;
+    public static final int STT_RESUME  = 0x02;
+    public static final int STT_START    = 0x01;
+
+
 
     public static int RECEIVECMD = 0x01;
 
 
-    public static int COMMONTIME = 15 * 1000;
-    public static int PROGRESSTIME = 15 * 1000;
-    public static int CHALLENGETIME = 10 *1000;
+    public static final int COMMONTIME = 15 * 1000;
+    public static final int PROGRESSTIME = 15 * 1000;
+    public static final int CHALLENGETIME = 10 *1000;
 
     public static int EXERCISE_TIME = 30*1000;
 
     public static int DetectTime = 10 * 1000;
+
+    public static int GameTime = 180;
 
 }

@@ -48,7 +48,7 @@ public class HitModeActivity extends Activity {
     Drawable dwPress;
     Drawable dwDisable;
     int Gray;
-    int Black;
+    int White;
 
     public static Map<Integer,ArrayList<String>> map = new HashMap<Integer, ArrayList<String>>();
 
@@ -59,7 +59,7 @@ public class HitModeActivity extends Activity {
         dwPress = getResources().getDrawable(R.drawable.pressed);
         dwDisable= getResources().getDrawable(R.drawable.disabled);
         Gray= getResources().getColor(R.color.gray);
-        Black = getResources().getColor(R.color.black);
+        White = getResources().getColor(R.color.white);
 
         initUI();
         Intent intent = getIntent();
@@ -101,7 +101,7 @@ public class HitModeActivity extends Activity {
         TouchListener endListener = new TouchListener(END);
         tv_end.setOnTouchListener(endListener);
         tv_start.setBackground(dwPress);
-        tv_start.setTextColor(Black);
+        tv_start.setTextColor(White);
         tv_continue.setBackground(dwDisable);
         tv_continue.setTextColor(Gray);
         tv_stop.setBackground(dwDisable);
@@ -129,25 +129,30 @@ public class HitModeActivity extends Activity {
                                 arrhitscores[i] = "0";
                             }
                             adapterRecycler.notifyDataSetChanged();
-                            CommonData.dataProcess.sendCmd(0x00, CommonData.HITCMD, CommonData.STARTSTT, iTime, 0x00);
+//                            CommonData.dataProcess.sendCmd(0x00, CommonData.HITCMD, CommonData.STARTSTT, iTime, 0x00);
+                            CommonData.dataProcess.sendCmd(0x00, CommonData.MOD_HIT, CommonData.STT_START, iTime, 0x00);
                             tv_start.setBackground(dwDisable);
                             tv_start.setTextColor(Gray);
+
                             tv_continue.setBackground(dwPress);
-                            tv_continue.setTextColor(Black);
+                            tv_continue.setTextColor(White);
+
                             tv_stop.setBackground(dwDisable);
                             tv_stop.setTextColor(Gray);
+
                             tv_end.setBackground(dwPress);
-                            tv_end.setTextColor(Black);
+                            tv_end.setTextColor(White);
                             bStart = true;
                             break;
                         }
                     case STOP:
                         if(bStart&&!bStop) {
-                            CommonData.dataProcess.sendCmd(0x00, CommonData.HITCMD, CommonData.PAUSESTT, 0x00, 0x00);
+//                            CommonData.dataProcess.sendCmd(0x00, CommonData.HITCMD, CommonData.PAUSESTT, 0x00, 0x00);
+                            CommonData.dataProcess.sendCmd(0x00, CommonData.MOD_HIT, CommonData.STT_PAUSE, 0x00, 0x00);
                             tv_stop.setBackground(dwDisable);
                             tv_stop.setTextColor(Gray);
                             tv_continue.setBackground(dwPress);
-                            tv_continue.setTextColor(Black);
+                            tv_continue.setTextColor(White);
                             bStop = true;
                         }
                         break;
@@ -155,17 +160,19 @@ public class HitModeActivity extends Activity {
                         if(bStop&&bStart)
                         {
                             tv_stop.setBackground(dwPress);
-                            tv_stop.setTextColor(Black);
+                            tv_stop.setTextColor(White);
                             tv_continue.setBackground(dwDisable);
                             tv_continue.setTextColor(Gray);
-                            CommonData.dataProcess.sendCmd(0x00, CommonData.HITCMD, CommonData.RESUMESTT, 0x00, 0x00);
+//                            CommonData.dataProcess.sendCmd(0x00, CommonData.HITCMD, CommonData.RESUMESTT, 0x00, 0x00);
+                            CommonData.dataProcess.sendCmd(0x00, CommonData.MOD_HIT, CommonData.STT_RESUME, 0x00, 0x00);
                             bStop = false;
                         }
                         break;
                     case RETURN:
                         if(bStart)
                         {
-                            CommonData.dataProcess.sendCmd(0x00, CommonData.HITCMD, CommonData.STOPSTT, 0x00, 0x00);
+//                            CommonData.dataProcess.sendCmd(0x00, CommonData.HITCMD, CommonData.STOPSTT, 0x00, 0x00);
+                            CommonData.dataProcess.sendCmd(0x00, CommonData.MOD_HIT, CommonData.STT_STOP, 0x00, 0x00);
                         }
                         Intent intent = new Intent(HitModeActivity.this, Hit_Activity.class);
                         startActivity(intent);
@@ -174,10 +181,11 @@ public class HitModeActivity extends Activity {
                     case END:
                         if(bStart)
                         {
-                            CommonData.dataProcess.sendCmd(0x00, CommonData.HITCMD, CommonData.STOPSTT, 0x00, 0x00);
+//                            CommonData.dataProcess.sendCmd(0x00, CommonData.HITCMD, CommonData.STOPSTT, 0x00, 0x00);
+                            CommonData.dataProcess.sendCmd(0x00, CommonData.MOD_HIT, CommonData.STT_STOP, 0x00, 0x00);
                             bStart = false;
                             tv_start.setBackground(dwPress);
-                            tv_start.setTextColor(Black);
+                            tv_start.setTextColor(White);
                             tv_continue.setBackground(dwDisable);
                             tv_continue.setTextColor(Gray);
                             tv_stop.setBackground(dwDisable);
@@ -223,7 +231,7 @@ public class HitModeActivity extends Activity {
     public void onBackPressed() {
         if(bStart)
         {
-            CommonData.dataProcess.sendCmd(0x00, CommonData.HITCMD, CommonData.STOPSTT, 0x00, 0x00);
+            CommonData.dataProcess.sendCmd(0x00, CommonData.MOD_HIT, CommonData.STT_STOP, 0x00, 0x00);
         }
         Intent intent = new Intent(HitModeActivity.this, Hit_Activity.class);
         startActivity(intent);

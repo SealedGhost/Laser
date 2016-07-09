@@ -7,65 +7,68 @@
 
     <TextView
         android:id="@+id/tv_common"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+        android:layout_width="150dp"
+        android:layout_height="80dp"
         android:layout_above="@+id/tv_progress"
-        android:layout_alignParentLeft="true"
+
         android:layout_marginBottom="50dp"
-        android:layout_marginLeft="194dp"
+        android:layout_marginLeft="94dp"
         android:background="@drawable/model"
         android:gravity="center"
         android:text="@string/common_mode"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
-        android:layout_marginTop="200dp" />
+        />
 
     <TextView
         android:id="@+id/tv_progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+        android:layout_width="150dp"
+        android:layout_height="80dp"
         android:layout_above="@+id/tv_challenge"
         android:layout_alignLeft="@+id/tv_common"
         android:layout_marginBottom="50dp"
         android:background="@drawable/model"
         android:gravity="center"
         android:text="@string/progress_mode"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="30sp" />
 
     <TextView
         android:id="@+id/tv_compete_return"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="123dp"
+
+        android:layout_marginRight="150dp"
         android:background="@drawable/back"
-        android:layout_marginEnd="75dp"
-        android:layout_alignTop="@+id/tv_common"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 
 
 
     <TextView
         android:id="@+id/tv_challenge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+        android:layout_width="150dp"
+        android:layout_height="80dp"
         android:layout_alignLeft="@+id/tv_progress"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="108dp"
         android:background="@drawable/model"
         android:gravity="center"
         android:text="@string/challenge_mode"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="30sp" />
 
     <TextView
         android:id="@+id/tv_competeset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="100dp"
+        android:layout_marginRight="40dp"
         android:background="@drawable/set"
-        android:layout_alignTop="@+id/tv_compete_return"
-        android:layout_toStartOf="@+id/tv_compete_return" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -73,17 +76,16 @@
         android:text="@string/competeBrief"
         android:id="@+id/textView2"
         android:lineSpacingExtra="9dp"
-        android:background="@drawable/backgroundsports"
+
         android:textColor="#ffffff"
         android:textSize="25sp"
         android:gravity="center_horizontal|left"
-        android:paddingTop="10dp"
-        android:layout_alignEnd="@+id/tv_compete_return"
-        android:layout_alignTop="@+id/tv_progress"
+
         android:textIsSelectable="false"
         android:padding="20dp"
-        android:layout_alignStart="@+id/tv_competeset"
-        android:layout_alignBottom="@+id/tv_challenge" />
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginStart="500dp"/>
 
 </RelativeLayout>
 

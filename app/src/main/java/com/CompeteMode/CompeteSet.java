@@ -31,7 +31,7 @@ public class CompeteSet extends Activity {
         tv_retrun = (TextView)findViewById(R.id.tv_gamereturn);
 
 
-        arrayAdapter = ArrayAdapter.createFromResource(this, R.array.CompeteTime, R.layout.spinner_item);
+        arrayAdapter = ArrayAdapter.createFromResource(this, R.array.CompeteTime, R.layout.spinner_item_white);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spTimeSet.setAdapter(arrayAdapter);
         spTimeSet.setOnItemSelectedListener(new ItemListner());

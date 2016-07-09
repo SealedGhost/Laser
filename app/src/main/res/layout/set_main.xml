@@ -15,18 +15,18 @@
         android:background="@drawable/back" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/TextView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tv_setreturn"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="78dp"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="24dp"
         android:background="@drawable/model"
         android:gravity="center"
-        android:text="模式1"
-        android:textColor="#000000"
-        android:textSize="30sp" />
+        android:text="模式2"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_gravity="center_vertical" />
 
     <TextView
         android:id="@+id/TextView02"
@@ -38,46 +38,59 @@
         android:background="@drawable/model"
         android:gravity="center"
         android:text="模式3"
-        android:textColor="#000000"
-        android:textSize="30sp" />
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_gravity="bottom" />
 
     <TextView
-        android:id="@+id/TextView01"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_setreturn"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="78dp"
         android:background="@drawable/model"
         android:gravity="center"
-        android:text="模式2"
-        android:textColor="#000000"
+        android:text="模式1"
+        android:textColor="@color/white"
         android:textSize="30sp" />
 
- <Spinner
+    <Spinner
      android:id="@+id/sp_mode1"
-     android:layout_width="300sp"
-     android:layout_height="80sp"
-     android:layout_alignTop="@+id/textView1"
-     android:layout_marginRight="170dp"
-     android:layout_toLeftOf="@+id/tv_setreturn"
-     android:background="@drawable/spinner" />
+     android:layout_width="200sp"
+     android:layout_height="75sp"
+     android:background="@drawable/spinner"
+        android:layout_alignTop="@id/textView1"
+        android:layout_toRightOf="@id/textView1"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+
+        />
 
  <Spinner
      android:id="@+id/sp_mode2"
-     android:layout_width="300sp"
-     android:layout_height="80sp"
-     android:layout_alignLeft="@+id/sp_mode1"
-     android:layout_alignTop="@+id/TextView01"
-     android:background="@drawable/spinner" />
+     android:layout_width="200sp"
+     android:layout_height="75sp"
+     android:background="@drawable/spinner"
+     android:layout_alignTop="@id/TextView01"
+
+     android:layout_toRightOf="@+id/TextView01"
+     android:layout_alignLeft="@id/sp_mode1"
+     android:layout_marginTop="15dp"
+
+     />
 
  <Spinner
      android:id="@+id/sp_mode3"
-     android:layout_width="300sp"
-     android:layout_height="80sp"
+     android:layout_width="200sp"
+     android:layout_height="75sp"
      android:layout_alignLeft="@+id/sp_mode2"
      android:layout_alignTop="@+id/TextView02"
-     android:background="@drawable/spinner" />
+     android:layout_toRightOf="@id/TextView02"
+     android:background="@drawable/spinner"
+     android:layout_marginTop="10dp"
+     />
 
  <TextView
      android:id="@+id/textView3"
@@ -98,7 +111,7 @@
         android:layout_alignTop="@+id/sp_mode2"
         android:layout_alignStart="@+id/tv_setreturn"
         android:layout_alignEnd="@+id/tv_setreturn"
-        android:textColor="#ff02010a"
+        android:textColor="@color/white"
         android:visibility="visible"
         android:textSize="30sp"
         android:background="@drawable/model"

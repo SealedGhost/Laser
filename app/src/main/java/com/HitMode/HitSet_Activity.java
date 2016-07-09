@@ -33,7 +33,7 @@ public class HitSet_Activity extends Activity {
         spMode3 = (Spinner)findViewById(R.id.sp_mode3);
         tvReturn = (TextView)findViewById(R.id.tv_setreturn);
         tvConfirm = (TextView)findViewById(R.id.tv_Confirm);
-        arrayAdapter = ArrayAdapter.createFromResource(this, R.array.ModeTime, R.layout.spinner_item);
+        arrayAdapter = ArrayAdapter.createFromResource(this, R.array.ModeTime, R.layout.spinner_item_white);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spMode1.setAdapter(arrayAdapter);
         spMode2.setAdapter(arrayAdapter);

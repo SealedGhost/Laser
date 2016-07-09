@@ -24,6 +24,6 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="@android:dimen/app_icon_size"
-        android:textColor="#006400" />
+        android:textColor="#e0e000" />
 
 </LinearLayout>

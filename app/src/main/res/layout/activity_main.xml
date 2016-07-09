@@ -12,10 +12,11 @@
         android:layout_alignParentLeft="true"
         android:layout_marginBottom="23dp"
         android:layout_marginLeft="111dp"
+
         android:background="@drawable/main_up"
         android:gravity="center"
         android:text="练习模式"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="40sp" />
 
     <TextView
@@ -24,11 +25,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="119dp"
-        android:layout_toRightOf="@+id/tv_exercise"
+        android:layout_alignLeft="@+id/tv_hit"
         android:background="@drawable/main_up"
         android:gravity="center"
         android:text="竞技模式"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="40sp" />
 
     <TextView
@@ -36,13 +37,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/tv_compete"
-        android:layout_alignRight="@+id/tv_compete"
-        android:layout_marginBottom="28dp"
-        android:layout_marginRight="142dp"
+        android:layout_alignRight="@+id/tv_exercise"
+        android:layout_marginBottom="23dp"
+
+        android:layout_alignLeft="@id/tv_exercise"
         android:background="@drawable/main_up"
         android:gravity="center"
         android:text="打靶模式"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="40sp" />
 
 </RelativeLayout>
